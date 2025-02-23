@@ -1,0 +1,123 @@
+/* Spotify-like Dark Theme */
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Contact Form Container */
+.contact-container {
+    background: #181818;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Sign-In Form Container */
+.signin-container {
+    background: black; /* Pure black background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    color: white;
+}
+
+
+h2 {
+    color: #1DB954;
+}
+
+
+p {
+    font-size: 14px;
+    color: #fef3f3;
+}
+
+
+/* Input Fields */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    background: #282828;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: #f9f8f8;
+}
+
+
+/* Submit Button */
+button {
+    width: 100%;
+    background: teal;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background: gray;
+}
+
+
+/* Response Message */
+#response-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #1DB954;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+p .signup-link{
+    text-decoration: none;
+}
+

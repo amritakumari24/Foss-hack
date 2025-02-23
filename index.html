@@ -1,99 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | My Music App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Spotify Clone</title>
+    <link rel="stylesheet" href="Contact.css">
 </head>
 <body>
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="s2.mp4" type="video/mp4">
+    </video>
 
-    <header>
-        <h1>🎶 Music That Moves You – Our Journey</h1>
-    </header>
-
-    <section class="hero">
-        <h1>Welcome to My Music App</h1>
-        <input type="text" id="searchBar" placeholder="Search for an artist...">
-  <p>Discover trending songs, explore your favorite artists, and enjoy the best music experience with us!</p>
-    </section>
-
-<section class="artist-container">
-    <div class="artist-card">
-        <img src="a3.jpeg">
-        <h3>Arijit Singh</h3>
-        <p>National Award-winning playback singer, known for hits like "Tum Hi Ho" and "Channa Mereya.</p>
-    </div>
-    <div class="artist-card">
-        <img src="a4.jpg" alt="Atif Aslam">
-        <h3>Atif Aslam</h3>
-        <p>Pakistani singer famous for Bollywood hits like "Tera Hone Laga Hoon" and "Jeene Laga Hoon.</p>
-    </div>
-    <div class="artist-card">
-        <img src="a5.png" alt="Shreya Ghoshal">
-        <h3>Shreya Ghoshal</h3>
-        <p>Four-time National Award winner and Filmfare Award winner for best female playback singer</p>
-    </div>
-    <div class="artist-card">
-        <img src="a7.jpg" alt="Sonu Nigam">
-        <h3>Sonu Nigam</h3>
-        <p>Winner of a National Award and several Filmfare Awards for his soulful playback singing.</p>
-    </div>
-    <div class="artist-card">
-        <img src="a8.jpg" alt="Lata Mangeshkar">
-        <h3>Lata Mangeshkar</h3>
-        <p>Awarded the Bharat Ratna, India’s highest civilian award, for her legendary career.</p>
-    </div>
-    <div class="artist-card">
-        <img src="a9.jpg" alt="Kishore Kumar">
-        <h3>Kishore Kumar</h3>
-        <p>Winner of 8 Filmfare Awards for Best Male Playback Singer, a record in his era.</p>
-    </div>
-    <div class="artist-card">
-        <img src="a10.jpg" alt="Armaan Malik">
-        <h3>Armaan Malik</h3>
-        <p>Dadasaheb Phalke Award winner and youngest Indian singer to win MTV Europe Music Award.</p>
+    <audio autoplay loop hidden>
+        <source src="romantic-love-wedding-valentine-music-303474.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="signin-container">
+        <h2>Sign In</h2>
+        <p>Welcome back! Sign in to request songs.</p>
+    
+        <form action="Mobile No" method="POST">
+            <label for="password">Mobile No</label>
+            <input type="password" id="password" placeholder="Enter your number" required>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+    
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+    
+            <button type="submit">Sign In</button>
+    
+            <p class="signUp">Don't have an account? <a href="signUp.html">Sign Up</a></p>
+        </form>
     </div>
     
-    <div class="artist-card">
-        <img src="a12.jpeg" alt="Bruno Mars">
-        <h3>Bruno Mars</h3>
-        <p>11-time Grammy Award winner, known for chart-toppers like "Uptown Funk.</p>
-    </div>
-    <div class="artist-card">
-        <img src="a13.jpg" alt="Charlie Puth">
-        <h3>Charlie Puth</h3>
-        <p>Billboard Music Award winner, known for hits like "See You Again" and "Attention.</p>
-    </div>
-<div class ="artist-card">
-    <img src="a14.jpeg" alt="Raftaar">
-    <h3>Raftaar</h3>
-    <p>Raftaar, a dynamic rapper, won the Brit Asia Music Award for Best Urban Act, redefining Indian hip-hop.</p>  
+   
+    <script src="contac.Js"></script> 
 
-</div>
-    </div>
-</section>
-
-
-    
-    <section class="features">
-        <h2>🎵 Why Choose My Music App?</h2>
-        <ul>
-            <li>✔ Stream trending songs instantly</li>
-            <li>✔ Discover new artists & genres</li>
-            <li>✔ Create your own playlists</li>
-            <li>✔ Enjoy an ad-free experience</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Follow us on <b>Instagram</b> | <b>Twitter</b> | <b>Facebook</b></p>
-        <button id="themeToggle">Instagram</button>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
-
- 
