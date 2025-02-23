@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color:rgb(70, 68, 68);
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: right;
+            gap: 10px;
+            text-align: right;
+            
+        }
+        
+        .auth-buttons button:hover{
+            background-color: teal;
+        }
+
+        .auth-buttons button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+           
+        }
+
+        .main {
+            display: flex;
+            
+        }
+
+        .side-bar {
+            width: 250px;
+            background-color: #000;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .side-bar h4 {
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #282828;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .card img {
+            width: 200%;
+            border-radius: 10px;
+        }
+
+        .songs-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .crd {
+            background: #181818;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .crd img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo img {border-radius: 10px;
+    width: 150px; 
+    height: auto;
+    margin-bottom: 5px; 
+}
+div .category{
+    background-color: white;
+    color: #121212;
+
+}
+.side-bar h4 {
+    background-color: white;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-bar h4:hover {
+    background-color: rgb(70, 68, 68);
+    color: white;
+    cursor: pointer;
+}
+.songs-container {
+    display: flex;
+    
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+.crd {
+    
+    background: #383737;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    height:60vh; 
+}
+.crd.wave{
+   
+    height: 100vh;
+}
+.crd img {
+    width: 100%;
+    height: 250px;
+    object-fit: 50px;
+    border-radius: 20px;
+} 
+h2{
+    background-color:black;
+    border-radius: 5px;
+}
+h2:hover{
+    background-color: teal;
+} 
+p{
+    background-color: black;
+    border-radius: 5px;
+    height: auto;
+}
+p:hover{
+    background-color: teal;
+}
+
+
+.crd:hover {
+    transform: scale(1.1); 
+}
+.audio{
+   width:90%;
+   height:8%;
+   padding: -342px;
+   margin: -10px;
+   text-align: center;
+}
+
+
+
+.wave-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181818;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wave {
+    width: 100px;
+    height: 50px;
+}
+
+.wave img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.song-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 1%;
+    align-items: center;
+}
+
+#currentSongTitle {
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center;
+} 
+
+
+
+
+  ..first-page {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.first-page a {
+  color: white;
+  text-decoration: none;
+}
+
+.first-page:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+#audioPlayer {
+    flex-grow: 1;
+    align-items: center;
+} </style>
+</head>
+<body>
+    <nav>
+        
+        <div class="auth-buttons">
+            <button>Sign Up</button>
+            <button>Log In</button>
+            <button class="first-page"><a href="index.html">go to first page</a></button>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="side-bar">
+            <div class="logo">
+                <img src="logo.gif" alt="">
+                <h1>Discover Music</h1>
+            </div>
+            <h4>Home</h4>
+            <h4>Search</h4>
+            <h4> My Playlist</h4>
+            <h4>Contact</h4>
+            <h4>About</h4>
+            <h4>Liked Songs</h4>
+           
+        </div>
+        <div class="songs-container">
+            <div class="crd">
+                <img src="ishq.jpg" alt="Main Ishq Likhu">
+                <h2>Ishq</h2>
+                <p>Faheem,Rauhan </p>
+                <audio controls class="audio">
+                    <source src="Main Ishq Likhu Tujhe Ho Jaye - PagalWorld.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+               
+            </div>
+            
+            <div class="crd">
+                <img src="attraction.jpg" alt="Attraction">
+                <h2>BAWLA</h2>
+                <p> Sukha, Prodgk</p>
+                <audio controls class="audio">
+                    <source src="Attraction - PagalWorld.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="crd">
+                <img src="ride it.jpg" alt="Ride It">
+                <h2>Ride It</h2>
+                <p>Top Song By Jay Sean</p>
+                <audio controls class="audio">
+                    <source src="Ride It - PagalWorld.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="crd">
+                <img src="dheere.jpeg" alt="DHEERE">
+                <h2>Dheere Dheere </h2>
+                <p> Song By Shilpa Rao</p>
+                <audio controls class="audio">
+                    <source src="Dheere Dheere Chuke Mere - PagalWorld (1).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+        </div>
+       
+    </div>
+    <div class="wave-container">
+        <div class="wave">
+            <img src="waveimage.webp" alt="waves">
+        </div>
+        <div class="song-info">
+            <img id="currentSongPoster" src="zaroor.jpg" alt="Now Playing">
+            <p id="currentSongTitle">Now Playing: Zaroor X Tere Bina</p>
+            <audio controls class="audioplayer">
+                <source src="Zaroor X Tere Bina - PagalWorld.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+           
+        </div>
+    </div>
+    <script src="sk.js"></script>
+</body>
+</html>
